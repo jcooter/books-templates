@@ -1,0 +1,9 @@
+# Burning Timber General Ledger
+# This file is auto-generated, manual edits will be removed
+option "title" "Burning Timber"
+option "operating_currency" "USD"
+
+include "definitions.beancount"
+{% for year in years %}include "{{ year }}/books.beancount"
+{% endfor %}
+
